@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "message": "It's impossible to fail if you learn from your mistakes",
+    "author": "Steve Jobs",
+    "photo": "https://wetoker.com/wp-content/uploads/2019/08/STEVE.jpg"
+  },
+  {
+    "id": 2,
+    "message": "Patience is a key element of success",
+    "author": "Bill Gates",
+    "photo": "https://www.euractiv.com/wp-content/uploads/sites/2/2015/11/bill_gates_with_eu_flag.jpeg"
+  },
+  {
+    "id": 3,
+    "message": "In a gentle way, you can shake the world",
+    "author": "Mahatma Ghandi",
+    "photo": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/gandhi-770x433.jpeg?6vX9r3yRDJyLfMxt6xqU_leK98tByZBZ"
+  },
+  {
+    "id": 4,
+    "message": "Work hard, have fun, make history",
+    "author": "Jeff Bezos",
+    "photo": "https://image.cnbcfm.com/api/v1/image/105178315-Jeff_Bezos_close_up.jpg?v=1537331999&w=1400&h=950"
+  },
+  {
+    "author": "Nikola Tesla",
+    "photo": "https://img-cdn.hipertextual.com/files/2014/06/Nikola-Tesla.jpg?strip=all&lossy=1&quality=57&resize=740%2C490&ssl=1",
+    "message": "I don't care that the stole my idea, I care that the don't have any of their own",
+    "id": 5
+  }
+]

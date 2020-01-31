@@ -50,8 +50,6 @@ NodeJS performs actions asynchronous (if we tell to do it)**
 
 # Section 08 - HTTP and web servers.
 
-## Class 44 - Creating my first server.
-
 ### -> HTTP
 Protocol over which communicate the client and server.
 
@@ -64,13 +62,9 @@ Some details:
 - Low fault tolerance. An unhandled error can down a server.
 - Frameworks vs vanilla. Both ways can be taken to mount a webserver.
 
-## Class 45 - Understanding my first server.
-
 ### Client server basic comunication.
 ![alt text](./client-server-comunication.jpeg "Client server comunication.")
 The client sends a request to the server, the server process it and return a response. Both, client and server, knows information about each other (like OS, browser, ports and so on) by the request and response.
-
-## Class 48 - Paths on express.js
 
 ### HTTP methods 
 
@@ -81,6 +75,15 @@ The client sends a request to the server, the server process it and return a res
 |  PUT   | Update an existing resource               |
 | PATCH  | Update a property of an existing resource |
 | DELETE | Remove an existing resource               |
+
+### Middleware
+
+A middleware it's code that run between the start of therequest and the endpoint of the server.
+
+### MVC
+> **M**odel **V**iew **C**ontroller
+Code design pattern who sepair the code about responsibilities.
+
 
 ---
 #NodeJS\
