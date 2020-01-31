@@ -1,0 +1,26 @@
+{
+  "name": "udemy.biblianodejs.lessons",
+  "version": "1.0.0",
+  "description": "## Class 44 - Creating my first server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qmarquez/udemy.bibliaNodeJS.S08.git"
+  },
+  "keywords": [
+    "nodejs",
+    "udemy"
+  ],
+  "author": "qmarquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qmarquez/udemy.bibliaNodeJS.S08/issues"
+  },
+  "homepage": "https://github.com/qmarquez/udemy.bibliaNodeJS.S08#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
