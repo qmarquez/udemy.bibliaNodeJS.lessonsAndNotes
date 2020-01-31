@@ -1,7 +1,9 @@
-# [PERSONAL PROJECT] [02] NodeJs Basics - from callback to promises.
-Just console simple app.
+# [COURSE] "La biblia de Node.js".
 
-## Concepts details.
+# Section 05 - Refreshing JS (ES6)
+
+##  Basics - from callback to promises.
+
 ### -> Callback
 > A function who serves as argument to another function, the second one can call it.
 
@@ -31,6 +33,20 @@ Just console simple app.
 
 #### Notes
 *· requires a tryCatch block.*
+
+# Section 07 - Sync vs async
+
+## Libuv, Event loop and Non-blocking IO
+
+> Libuv it's a C++ library to manage OS events. It's who 'talks' to the OS.\
+> Works togheter with V8.
+
+Libuv has a queue of finished events (Systems events). For each loop Libuv checs that queue, if are something perform a callback to V8.
+
+> Non-blocking IO: Capability to make actions without stop others.
+
+**Note: V8, Libuv and Javascript are all sincronous.\
+NodeJS performs actions asynchronous (if we tell to do it)**
 
 ---
 #NodeJS\

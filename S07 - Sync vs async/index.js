@@ -1,9 +1,9 @@
 const { SAVE, NO_SHUTERED_EVENT } = require('./events');
-const { EventEmitter } = require('events');
-// or | const Emitter = require('./emitter');
+const Emitter = require('./emitter');
+// or | const { EventEmitter } = require('events');
 
-const emitter = new EventEmitter;
-// or | const emitter = new Emitter;
+const emitter = new Emitter;
+// or | const emitter = new EventEmitter;
 
 emitter.on(SAVE, () => {
   console.log('on save activate 1.');
