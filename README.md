@@ -67,13 +67,24 @@ Some details:
 ## Class 45 - Understanding my first server.
 
 ### Client server basic comunication.
-![alt text](./resources/notes/client-server-comunication.jpeg "Client server comunication.")
-
+![alt text](./client-server-comunication.jpeg "Client server comunication.")
 The client sends a request to the server, the server process it and return a response. Both, client and server, knows information about each other (like OS, browser, ports and so on) by the request and response.
 
+## Class 48 - Paths on express.js
+
+### HTTP methods 
+
+| METHOD | Standard use                              |
+| :----: | ----------------------------------------- |
+|  GET   | Read a resource                           |
+|  POST  | Create a new resource                     |
+|  PUT   | Update an existing resource               |
+| PATCH  | Update a property of an existing resource |
+| DELETE | Remove an existing resource               |
 
 ---
 #NodeJS\
 #JavaScript\
-#ES6
-
+#ES6\
+#express.js\
+#HTTP
