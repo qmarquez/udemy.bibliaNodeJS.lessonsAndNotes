@@ -48,22 +48,32 @@ Libuv has a queue of finished events (Systems events). For each loop Libuv checs
 **Note: V8, Libuv and Javascript are all sincronous.\
 NodeJS performs actions asynchronous (if we tell to do it)**
 
-
 # Section 08 - HTTP and web servers.
 
-## -> HTTP
+## Class 44 - Creating my first server.
+
+### -> HTTP
 Protocol over which communicate the client and server.
 
-## -> Web server
+### -> Web server
 Software wich delivers contents requered by the client. It's distinct to a server (hardware).
 
-## -> NodeJS and web server.
+### -> NodeJS and web server.
 Some details:
 - Node can create it's own web server. Includes the tools for it.
 - Low fault tolerance. An unhandled error can down a server.
 - Frameworks vs vanilla. Both ways can be taken to mount a webserver.
 
+## Class 45 - Understanding my first server.
+
+### Client server basic comunication.
+![alt text](./resources/notes/client-server-comunication.jpeg "Client server comunication.")
+
+The client sends a request to the server, the server process it and return a response. Both, client and server, knows information about each other (like OS, browser, ports and so on) by the request and response.
+
+
 ---
 #NodeJS\
 #JavaScript\
 #ES6
+
