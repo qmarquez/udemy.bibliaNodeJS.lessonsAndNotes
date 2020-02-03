@@ -1,7 +1,7 @@
 {
-  "name": "SQL",
+  "name": "NoSQL",
   "version": "1.0.0",
-  "description": "Minimalist sequelize console app",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sequelize": "^5.21.3",
-    "sequelize-cli": "^5.5.1",
-    "sqlite3": "^4.1.1"
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "mongoose": "^5.8.11",
+    "node-cron": "^2.0.3"
   }
 }
