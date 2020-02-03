@@ -85,6 +85,23 @@ A middleware it's code that run between the start of therequest and the endpoint
 Code design pattern who sepair the code about responsibilities.
 
 
+# Section 09 - Databases.
+
+SQL databases starts using at 80s. NoSQL databases are newer.
+
+| SQL                                                                        | NoSQL                                                               |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Organize the information on chunks relating between them through unique Id | Extremely usefull when we need to store very changing data          |
+| Group the info in "tables"                                                 | Group the info in "collections"                                     |
+| Meets ACID props (make the system strong and less vulnerable)              |                                                                     |
+| Engines: MSSQL, Oracle, Postgres, MySQL, SQLite, and more                  | Engines: MongoDB, Cassandra, RethinkDB, FirebaseDB, Redis, and more |
+
+### ORM
+**O**bject **R**elational **M**apping it's a software model wich map db tables on entities for a easily handling.
+
+### ODM
+**O**bject **D**ocument **M**apping, same as ORM but document oriented.
+
 ---
 #NodeJS\
 #JavaScript\
