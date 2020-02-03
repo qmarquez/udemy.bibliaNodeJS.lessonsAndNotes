@@ -10,15 +10,15 @@ module.exports = {
           lastname: 'Marquez',
           phone: '12345678',
           email: 'qmarquez@email.com',
-          createdAt: new Date().toDateString(),
-          updatedAt: new Date().toDateString()
+          createdAt: new Date(),
+          updatedAt: new Date()
         }, {
           firstname: 'Neiel',
           lastname: 'Marquez',
           phone: '87654321',
           email: 'nmarquez@email.com',
-          createdAt: new Date().toDateString(),
-          updatedAt: new Date().toDateString()
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ]
     )

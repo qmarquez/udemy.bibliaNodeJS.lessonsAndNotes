@@ -16,7 +16,7 @@
 *· First callback argument allways will be the error.*
 
 ### -> Promise
-> **_Object_** wich represent the end or fail of a asinconous operation.
+> **_Object_** which represent the end or fail of a asinconous operation.
 
 | Advantages                                                  | Disadvantages                                               |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
@@ -54,7 +54,7 @@ NodeJS performs actions asynchronous (if we tell to do it)**
 Protocol over which communicate the client and server.
 
 ### -> Web server
-Software wich delivers contents requered by the client. It's distinct to a server (hardware).
+Software which delivers contents requered by the client. It's distinct to a server (hardware).
 
 ### -> NodeJS and web server.
 Some details:
@@ -97,10 +97,19 @@ SQL databases starts using at 80s. NoSQL databases are newer.
 | Engines: MSSQL, Oracle, Postgres, MySQL, SQLite, and more                  | Engines: MongoDB, Cassandra, RethinkDB, FirebaseDB, Redis, and more |
 
 ### ORM
-**O**bject **R**elational **M**apping it's a software model wich map db tables on entities for a easily handling.
+**O**bject **R**elational **M**apping it's a software model which map db tables on entities for a easily handling.
 
 ### ODM
 **O**bject **D**ocument **M**apping, same as ORM but document oriented.
+
+### NodeJS - process.argv
+It's the process property which store the command line arguments passed to node when the command runs.\
+By default argv stores:
+<ol start='0'>
+ <li>node path.</li>
+ <li>file which node runs path.</li>
+ <li>and more, the rest of params.</li>
+</ol>
 
 ---
 #NodeJS\
