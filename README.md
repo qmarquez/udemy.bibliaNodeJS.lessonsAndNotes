@@ -84,7 +84,6 @@ A middleware it's code that run between the start of therequest and the endpoint
 > **M**odel **V**iew **C**ontroller
 Code design pattern who sepair the code about responsibilities.
 
-
 # Section 09 - Databases.
 
 SQL databases starts using at 80s. NoSQL databases are newer.
@@ -111,9 +110,36 @@ By default argv stores:
  <li>and more, the rest of params.</li>
 </ol>
 
+# Section 10 - Frontend and backend.
+
+### Frontend.
+Visual interface which can user interact with a software or process.
+
+### Backend.
+Piece of software that handle business logic and data persistence.
+
+### Frameworks
+Piece of software that works as base and organization on a software development.
+Frameworks examples
+- Frontend: **Angular, React, Vue, Svelte, Ember**.
+- Backend: **NextJS, sails, express, adonis**.
+
+| When use a framework?               | When **NO** use a framework?        |
+| ----------------------------------- | ----------------------------------- |
+| Looking for community support       | Have not community support          |
+| Fast developmente time              | We don't know the language          |
+| Other tools transparent integration | We fall into the frameworks fashion |
+
+
 ---
 #NodeJS\
 #JavaScript\
 #ES6\
 #express.js\
-#HTTP
+#HTTP\
+#SQL\
+#NoSQL\
+#sequelize\
+#mongoose\
+#backend\
+#frontend
