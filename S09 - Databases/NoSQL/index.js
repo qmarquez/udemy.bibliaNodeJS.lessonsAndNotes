@@ -1,31 +1,36 @@
-if (!process.env.DBPSW) {
-  console.log('DBPSW env fault.');
-  process.exit(1);
-}
-if (!process.env.DBUSR) {
-  console.log('DBUSR env fault.');
-  process.exit(1);
-}
-if (!process.argv[2]) {
-  console.log('Kitty name fault.');
-}
-
+const { DBPSW, DBUSR } = require('./config');
 const mongoose = require('mongoose');
-const connString = `mongodb+srv://${process.env.DBUSR}:${process.env.DBPSW}@asistente-empresarial-c0-mvt1t.gcp.mongodb.net/udemy_biblianodejs?retryWrites=true&w=majority`;
+const connString = `mongodb+srv://${DBUSR}:${DBPSW}@asistente-empresarial-c0-mvt1t.gcp.mongodb.net/udemy_biblianodejs?retryWrites=true&w=majority`;
+const cron = require('node-cron');
 
-mongoose.connect(connString, { useNewUrlParser: true, useUnifiedTopology: true });
+(async () => {
+  try {
+    await mongoose.connect(connString, { useNewUrlParser: true, useUnifiedTopology: true })
 
-const Cat = mongoose.model("Cat", { name: String });
+    cron.schedule("* * * * * *", async () => {
+      console.log('cron executed');
 
-const kitty = new Cat({ name: process.argv[2] });
-kitty.save()
-  .then(() => {
-    console.log('Kitty saved. All kittys are:');
-    Cat.find()
-      .then(kitties => {
-        console.log(kitties);
-        process.exit(0);
-      })
-      .catch(console.log);
-  })
-  .catch(console.log);
+      const axios = require('axios').default;
+      const cheerio = require('cheerio');
+      const { BreakingNew } = require('./models');
+
+      const { data } = await axios.get("https://cnnespanol.cnn.com/");
+      const $ = cheerio.load(data);
+
+      const breakingNews = [];
+
+      $(".news__title").each(([, elem]) => {
+        const breakingNew = new BreakingNew({
+          title: $(elem).text().replace(/\t|\n/g, ''),
+          link: $(elem.children).attr('href')
+        });
+
+        breakingNews.push(breakingNew);
+      });
+
+      BreakingNew.create(breakingNews);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+})()
