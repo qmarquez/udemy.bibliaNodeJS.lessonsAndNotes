@@ -112,10 +112,10 @@ By default argv stores:
 
 # Section 10 - Frontend and backend.
 
-### Frontend.
+### Frontend
 Visual interface which can user interact with a software or process.
 
-### Backend.
+### Backend
 Piece of software that handle business logic and data persistence.
 
 ### Frameworks
@@ -130,6 +130,23 @@ Frameworks examples
 | Fast developmente time              | We don't know the language          |
 | Other tools transparent integration | We fall into the frameworks fashion |
 
+### Typescript
+Open source programming language, Microsoft leadered, with OOP tools for big projects. It's a **superset** of Javascript.
+
+| **YES** TS                      | **NO** TS           |
+| ------------------------------- | ------------------- |
+| Big projects                    | Weak OOP knowledge  |
+| Teams with strong OOP knowledge | Type it's a problem |
+| Constant evolving               |                     |
+
+- #### Types
+- #### Functions
+- #### Interfaces
+- #### Clases
+- #### Decorators
+
+### Superset
+Language writen over another.
 
 ---
 #NodeJS\
