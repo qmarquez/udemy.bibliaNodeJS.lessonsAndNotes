@@ -1,6 +1,11 @@
 const server = require('./routes');
 const { PORT } = require('./config');
+const { mongooseConnect } = require('./lib');
 
-server.listen(PORT, () => {
-  console.log('Server up :)');
-});
+mongooseConnect.up()
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log('Server up :)');
+    });
+  })
+  .catch(console.log);
