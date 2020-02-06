@@ -133,17 +133,13 @@ Frameworks examples
 ### Typescript
 Open source programming language, Microsoft leadered, with OOP tools for big projects. It's a **superset** of Javascript.
 
+Note: tsc CLI for Typescript.
+
 | **YES** TS                      | **NO** TS           |
 | ------------------------------- | ------------------- |
 | Big projects                    | Weak OOP knowledge  |
 | Teams with strong OOP knowledge | Type it's a problem |
 | Constant evolving               |                     |
-
-- #### Types
-- #### Functions
-- #### Interfaces
-- #### Clases
-- #### Decorators
 
 ### Superset
 Language writen over another.
