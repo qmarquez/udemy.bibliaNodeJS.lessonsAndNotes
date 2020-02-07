@@ -144,6 +144,87 @@ Note: tsc CLI for Typescript.
 ### Superset
 Language writen over another.
 
+# Section 11 - APIs architecture.
+
+### APIs
+An API:
+- Reduce software coupling.
+- Aggregate differential value to an enterprise.
+
+It's a group of protocols and difinitions used to develop and integrate software.
+API stands for **A**pplication **P**rogramming **I**nterface.
+
+### Software architecture
+General and reusable solution to a common problem on software development.
+This group of technics anwers questions like:
+- What programming language use?
+- What framwork?
+- Use disegne patterns?
+- How handle project scafolding?
+- What DB to use?
+- So on
+
+Some common architectures are:
+- Client/server architecture.
+- N layers architecture.
+- Bus events architectures.
+- Master/slave architecture.
+- Anothers
+
+#### N layers architecture
+Commonly used for APIs and desktop apps.
+
+#### Client/server architecture
+Low coupling apps like mobile apps and APIs
+
+### RESTful
+REST stands for **RE**presentational **S**tate **T**ransfer. REST are some principles which describe how to resources are defined and accessed through a web service.\
+
+A web server which implements REST principles is called RESTful.
+
+Some RESTful details:
+- Clean and intuitive URIs.
+- Use JSON or XML format info.
+
+The REST architecture focus on:
+- Performance.
+- Scalability.
+- Simplicity.
+- Portability.
+- Reliability.
+
+#### REST principles
+1. **Client/server**
+
+The backend and frontend (in this case for web apps) are completly separated. Two diferent frameworks.
+
+2. **Layers system**
+
+The layers are sorted hierarchically and restricted to the layers next to.
+
+3. **Stateless**
+
+A request must contain all data for the server understand and build the context to process it.
+
+4. **Uniform interface**
+  
+Are guided for:
+   1.  Resource identification.
+   2.  Resource manipulation.
+   3.  Self-descriptive repsonses.
+   4.  State administration (throught HATEOAS)
+
+These four pilars are handled throught: **HTTP Verbs**, **Media types** and **HETEOAS.**
+
+5. **Cache**
+
+Derived of stateless, all responses need explicitly tagged as cacheble or not cacheble.
+
+6. **Code on demand** (optional).
+
+Allow a client access to resources not knowing how to process it.
+
+
 ---
 #NodeJS\
 #JavaScript\
