@@ -24,7 +24,7 @@ server.get('/api/technology/:id', async (req, res) => {
 
   res.json({ data: technology });
 });
-server.get('/api/technology/search', async (req, res) => {
+server.get('/api/technologies/search', async (req, res) => {
   const { name } = req.query;
   const technologies = (await Technology.find({ name: new RegExp(name, 'i') }))
     .map(technology => {

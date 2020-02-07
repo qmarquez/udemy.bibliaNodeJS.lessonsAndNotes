@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'technology/:id', component: TechnologyComponent },
-  { path: 'seacrh/:query', component: SearchComponent },
+  { path: 'search', component: SearchComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

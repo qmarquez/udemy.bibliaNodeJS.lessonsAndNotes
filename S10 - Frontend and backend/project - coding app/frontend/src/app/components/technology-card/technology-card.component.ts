@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Technology } from '../../models/technology.model';
 
 @Component({
   selector: 'app-technology-card',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TechnologyCardComponent implements OnInit {
 
-  @Input() technology: any;
+  @Input() technology: Technology | any;
 
   constructor() {
   }

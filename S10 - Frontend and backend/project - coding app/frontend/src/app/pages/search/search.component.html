@@ -1,1 +1,19 @@
-<p>search works!</p>
+<h1>Searching <small>{{query}}</small></h1>
+
+<ng-container *ngIf="technologies.length === 0; else results;">
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info" role="alert">
+        No hay techs para la búsqueda: {{query}}
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #results>
+  <div class="card-columns">
+    <ng-container *ngFor="let technology of technologies">
+      <app-technology-card [technology]="technology"></app-technology-card>
+    </ng-container>
+  </div>
+</ng-template>
