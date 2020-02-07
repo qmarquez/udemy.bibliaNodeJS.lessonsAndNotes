@@ -16,12 +16,12 @@ export class HttpService {
   }
 
   public getTechnologies() {
-    return this.httpClient.get<Technologies>(this.baseUrl + '/technologies');
+    return this.httpClient.get<{ data: Technologies }>(this.baseUrl + '/technologies');
   }
   public getTechnology(id) {
-    return this.httpClient.get<Technology>(this.baseUrl + `/technologies/${id}`);
+    return this.httpClient.get<{ data: Technology }>(this.baseUrl + `/technology/${id}`);
   }
   public searchTechnologies(name) {
-    return this.httpClient.get<Technologies>(this.baseUrl + '/technologies/search', { params: { name } });
+    return this.httpClient.get<{ data: Technologies }>(this.baseUrl + '/technologies/search', { params: { name } });
   }
 }

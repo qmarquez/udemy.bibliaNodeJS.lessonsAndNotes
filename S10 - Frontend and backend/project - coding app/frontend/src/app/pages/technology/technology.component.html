@@ -1,1 +1,17 @@
-<p>technology works!</p>
+<h1>{{technology.name | uppercase}} <small>{{technology.createdAt | date: "y"}}</small></h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <img [src]="technology.logo" [alt]="technology.name" class="img-fluid">
+    <br>
+    <a [routerLink]="['/technologies']" class="btn btn-outline-danger btn-block">Go back</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{technology.name}}</h3>
+    <hr>
+    <p>{{technology.description}}</p>
+    <ng-container *ngFor="let tag of technology.tags">
+      <p>#{{tag}}</p>
+    </ng-container>
+  </div>
+</div>
