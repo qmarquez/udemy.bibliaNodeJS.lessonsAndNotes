@@ -31,4 +31,12 @@ register({
   HomeRoutes: asFunction(HomeRoutes).singleton()
 });
 
+// MODELS
+const { User, Comment, Idea } = require('../models');
+register({
+  User: asValue(User),
+  Idea: asValue(Idea),
+  Comment: asValue(Comment),
+})
+
 module.exports = container;
