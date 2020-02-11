@@ -13,30 +13,27 @@ register({
   router: asFunction(Routes).singleton()
 });
 
-// SERVICES
-const { HomeService } = require('../services');
 register({
-  HomeService: asClass(HomeService).singleton()
+  // SERVICES
+  ...mapImports(require('../services'), service => asClass(service).singleton()),
+
+  // CONTROLLERS
+  ...mapImports(require('../controllers'), controller => asClass(controller.bind(controller)).singleton()),
+
+  // ROUTES
+  ...mapImports(require('../routes/index.routes'), route => asFunction(route).singleton()),
+
+  // REPOSITORIES
+  ...mapImports(require('../models'), repository => asClass(repository).singleton()),
+
+  // MODELS
+  ...mapImports(require('../models'), model => asValue(model))
 });
 
-// CONTROLLERS
-const { HomeController } = require('../controllers');
-register({
-  HomeController: asClass(HomeController.bind(HomeController)).singleton()
-});
-
-// ROUTES
-const { HomeRoutes } = require('../routes/index.routes');
-register({
-  HomeRoutes: asFunction(HomeRoutes).singleton()
-});
-
-// MODELS
-const { User, Comment, Idea } = require('../models');
-register({
-  User: asValue(User),
-  Idea: asValue(Idea),
-  Comment: asValue(Comment),
-})
 
 module.exports = container;
+
+function mapImports(imports, mapper) {
+  Object.keys(imports).forEach(key => imports[key] = mapper(imports[key]));
+  return imports;
+}
