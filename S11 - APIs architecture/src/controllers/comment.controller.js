@@ -5,7 +5,7 @@ module.exports = class CommentController extends BaseController {
     super(CommentService)
   }
 
-  getIdeasComment = async (req, res) => {
+  getIdeaComment = async (req, res) => {
     const { ideaId } = req.params;
     const comments = this.service.getIdeasComments(ideaId);
     return res.send(comments);

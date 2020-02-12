@@ -11,7 +11,7 @@ module.exports = class IdeaController extends GetAllController {
     return res.status(201).send(idea);
   }
 
-  getUserIDeas = async (req, res) => {
+  getUserIdeas = async (req, res) => {
     const { userId } = req.params
 
     const ideas = await this.service.getUserIdeas(userId);

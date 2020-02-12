@@ -1,4 +1,1 @@
-module.exports = {
-  notFoundMiddleware: require('./not-found.middleware'),
-  errorMiddleware: require('./error.middleware')
-}
+module.exports = require('index_creator')(__dirname, { caseType: 'camel' });

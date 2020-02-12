@@ -6,7 +6,7 @@ const { register } = container;
 // MAINS
 const app = require('.');
 const config = require('../config');
-const Routes = require('../routes');
+const Routes = require('../routes/index.routes');
 register({
   app: asClass(app).singleton(),
   config: asValue(config),
@@ -14,6 +14,9 @@ register({
 });
 
 register({
+  // REPOSITORIES
+  ...mapImports(require('../repositories'), repository => asClass(repository).singleton()),
+
   // SERVICES
   ...mapImports(require('../services'), service => asClass(service).singleton()),
 
@@ -21,10 +24,7 @@ register({
   ...mapImports(require('../controllers'), controller => asClass(controller.bind(controller)).singleton()),
 
   // ROUTES
-  ...mapImports(require('../routes/index.routes'), route => asFunction(route).singleton()),
-
-  // REPOSITORIES
-  ...mapImports(require('../models'), repository => asClass(repository).singleton()),
+  ...mapImports(require('../routes'), route => asFunction(route).singleton()),
 
   // MODELS
   ...mapImports(require('../models'), model => asValue(model))

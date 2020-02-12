@@ -1,5 +1,1 @@
-module.exports= {
-  User: require('./user.model'),
-  Idea: require('./idea.model'),
-  Comment: require('./comment.model')
-}
+module.exports = require('index_creator')(__dirname);

@@ -1,6 +1,1 @@
-module.exports = {
-  HomeController: require('./home.controller'),
-  UserController: require('./user.controller'),
-  IdeaController: require('./idea.controller'),
-  CommentController: require('./comment.controller'),
-}
+module.exports = require('index_creator')(__dirname, { excludePattern: /index|base/ig });

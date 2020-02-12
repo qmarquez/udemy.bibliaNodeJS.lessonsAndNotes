@@ -1,5 +1,1 @@
-module.exports = {
-  UserRepository: require('./user.repository'),
-  IdaeRepository: require('./idea.repository'),
-  CommentRepository: require('./comment.repository'),
-}
+module.exports = require('index_creator')(__dirname);

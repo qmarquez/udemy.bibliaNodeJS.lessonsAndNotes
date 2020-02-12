@@ -1,6 +1,1 @@
-module.exports = {
-  HomeService: require('./home.service'),
-  UserService: require('./user.service'),
-  IdeaService: require('./idea.service'),
-  CommentService: require('./comment.service')
-}
+module.exports = require('index_creator')(__dirname);
