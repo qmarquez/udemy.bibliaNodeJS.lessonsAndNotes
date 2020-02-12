@@ -21,7 +21,7 @@ class CommentService extends BaseService {
     return idea.comments;
   }
 
-  async createComent(comment, ideaId) {
+  async createComment(comment, ideaId) {
     if (!ideaId) {
       throw new DataError('ideaId must be sent.', 400);
     }

@@ -30,11 +30,11 @@ register({
   ...mapImports(require('../models'), model => asValue(model))
 });
 
-module.exports = container;
-
 function mapImports(imports, mapper) {
   return Object.keys(imports).reduce(
     (acc, key) => ({ ...acc, [key]: mapper(imports[key]) }),
     imports
   );
 }
+
+module.exports = container;
