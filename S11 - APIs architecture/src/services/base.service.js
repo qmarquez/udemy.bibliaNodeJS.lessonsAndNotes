@@ -1,4 +1,4 @@
-const DataError = require('../helpers/DataError');
+const { DataError } = require('../helpers/errors');
 
 class BaseService {
 

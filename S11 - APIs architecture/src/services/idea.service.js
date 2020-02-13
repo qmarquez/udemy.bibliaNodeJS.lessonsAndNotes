@@ -1,14 +1,14 @@
 const BaseService = require('./base.service');
-const DataError = require('../helpers/DataError');
 
 class IdeaService extends BaseService {
-  constructor({ IdeaRepository }) {
+  constructor({ IdeaRepository, errors: { DataError } }) {
     super(IdeaRepository);
+    this.DataError = DataError;
   }
 
   async getUserIdeas(author) {
     if (!author) {
-      throw new DataError('author must sent', 400);
+      throw new this.DataError('author must sent', 400);
     }
 
     return await this.repository.getUserIdeas(author);
@@ -16,13 +16,13 @@ class IdeaService extends BaseService {
 
   async upvoteIdea(id) {
     if (!id) {
-      throw new DataError('id must be sent', 400);
+      throw new this.DataError('id must be sent', 400);
     }
 
     const idea = this.repository.get(id);
 
     if (!idea) {
-      throw new DataError('idea not found', 404);
+      throw new this.DataError('idea not found', 404);
     }
 
     idea.upvotes.push(true);
@@ -32,13 +32,13 @@ class IdeaService extends BaseService {
 
   async downvoteIdea(id) {
     if (!id) {
-      throw new DataError('id must be sent', 400);
+      throw new this.DataError('id must be sent', 400);
     }
 
     const idea = this.repository.get(id);
 
     if (!idea) {
-      throw new DataError('idea not found', 404);
+      throw new this.DataError('idea not found', 404);
     }
 
     idea.downvotes.push(true);

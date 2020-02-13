@@ -9,7 +9,7 @@ const schema = new Schema({
 
 schema.pre('save', async function (next) {
   const user = this;
-  if (user.isModified('password')) {
+  if (!user.isModified('password')) {
     return next();
   }
   const salt = genSaltSync(10);
@@ -24,6 +24,7 @@ schema.methods.toJSON = function () {
 }
 
 schema.methods.comparePasswords = function (password) {
+  console.log(password, this.password);
   return compareSync(password, this.password);
 }
 

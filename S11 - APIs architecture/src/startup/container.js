@@ -27,7 +27,13 @@ register({
   ...mapImports(require('../routes'), route => asFunction(route).singleton()),
 
   // MODELS
-  ...mapImports(require('../models'), model => asValue(model))
+  ...mapImports(require('../models'), asValue),
+
+  // HELPERS
+  ...mapImports(require('../helpers'), asValue),
+
+  // MIDDLEWARES
+  // ...mapImports(require('../middlewares'), asValue),
 });
 
 function mapImports(imports, mapper) {
