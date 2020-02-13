@@ -14,9 +14,9 @@ module.exports = function ({
     .use(express.json())
     .use(require('cors')())
     .use(require('helmet')())
-    .use(require('compression')())
-    .use(parseIntMiddleware)
-    .use(cacheMiddleware);
+    .use(require('compression')());
+    // .use(parseIntMiddleware)
+    // .use(cacheMiddleware);
 
   apiRoutes
     .use('/home', HomeRoutes)
