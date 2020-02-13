@@ -5,7 +5,7 @@ module.exports = function ({
   // ROTES
   HomeRoutes, UserRoutes, IdeaRoutes, CommentRoutes, AuthRoutes,
   // MIDDLEWARES
-  notFoundMiddleware, errorMiddleware, parseIntMiddleware
+  notFoundMiddleware, errorMiddleware, parseIntMiddleware, cacheMiddleware
 }) {
   const router = express.Router();
   const apiRoutes = express.Router();
@@ -14,10 +14,11 @@ module.exports = function ({
     .use(express.json())
     .use(require('cors')())
     .use(require('helmet')())
-    .use(require('compression')());
+    .use(require('compression')())
+    .use(parseIntMiddleware)
+    .use(cacheMiddleware);
 
   apiRoutes
-    .use(parseIntMiddleware)
     .use('/home', HomeRoutes)
     .use('/user', UserRoutes)
     .use('/idea', IdeaRoutes)
