@@ -3,11 +3,13 @@ const { Router } = require('express');
 module.exports = function ({ CommentController }) {
   const router = Router();
 
-  router.post('/', CommentController.create);
+  const { create, update, getIdeaComment } = CommentController;
+
+  router.post('/', create);
   router.route('/:id')
-    .patch(CommentController.update)
+    .patch(update)
     .delete(CommentController.delete);
-  router.get('/:ideaId', CommentController.getIdeaComment);
+  router.get('/:ideaId', getIdeaComment);
 
   return router;
 }

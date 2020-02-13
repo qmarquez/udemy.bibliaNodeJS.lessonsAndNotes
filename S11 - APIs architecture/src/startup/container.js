@@ -33,7 +33,7 @@ register({
   ...mapImports(require('../helpers'), asValue),
 
   // MIDDLEWARES
-  // ...mapImports(require('../middlewares'), asValue),
+  ...mapImports(require('../middlewares'), asValue),
 });
 
 function mapImports(imports, mapper) {
