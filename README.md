@@ -224,6 +224,18 @@ Derived of stateless, all responses need explicitly tagged as cacheble or not ca
 
 Allow a client access to resources not knowing how to process it.
 
+# Section 12 - Docker.
+
+Docker it's a container handler. Docker it's a container handler. The main idea it's the creation of isolateds, lightweight and portable containers in which the apps runs so getting easily deploys.
+
+It's a tool developer and testers oriented.
+
+#### Summary:
+1. To create a container we need an image, [DockerHUB](https://hub.docker.com) it's a good place to start looking for.
+2. An image it's created by a **Dockerfile**.
+3. A Dockerfile it's instruction based.
+4. An image could be shared and reused.
+5. The container data persists **ONLY** on volumes.
 
 ---
 #NodeJS\
