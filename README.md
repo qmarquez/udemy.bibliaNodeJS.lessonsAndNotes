@@ -271,6 +271,26 @@ Features:
 | Trustable potential      | Information integrity      |
 | Tranparents deploy       | More specialized workteams |
 
+# Section 14 - CI/CD.
+
+#### Continuous integration.
+
+Process where every change to our app must be tested and verified by tests.
+
+Some tools: TravisCI, Azure DevOps, Jenkins...
+
+#### Continuous delivery.
+
+Similar to CI but the tests must to ensure that every change are production ready. The production deploy still manual.
+
+#### Continuous deployment.
+
+Similar to continuous delivery but runs until production.
+
+#### Pipeline.
+
+Steps to follow on a devops process.
+
 ---
 #NodeJS\
 #JavaScript\
