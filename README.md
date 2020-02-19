@@ -237,6 +237,40 @@ It's a tool developer and testers oriented.
 4. An image could be shared and reused.
 5. The container data persists **ONLY** on volumes.
 
+# Section 13 - Microservices.
+
+#### Monolite architecture.
+
+It's one and only autonomic programm unit.
+
+| Advantages      | Disadvantages        |
+| --------------- | -------------------- |
+| Easy to develop | No flexible          |
+| Easy to test    | Hard to maintain     |
+| Easy work alone | Hard to scale        |
+| Easy to deploy  | Unreliable potential |
+
+#### Microservices architecture.
+
+_"Microservices are reached by pain, not pleasure"_
+
+Collection of autonomous and small services.
+
+Features: 
+ - One and only resposability.
+ - Persistence.
+ - Resilience.
+ - Logs.
+ - API good defined.
+
+
+| Advantages               | Disadvantages              |
+| ------------------------ | -------------------------- |
+| Easy scale               | Hard e2e test              |
+| Allo technologies mixing | More chance to duplicates  |
+| Trustable potential      | Information integrity      |
+| Tranparents deploy       | More specialized workteams |
+
 ---
 #NodeJS\
 #JavaScript\
