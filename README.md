@@ -9,7 +9,7 @@
 
 | Advantages                        | Disadvantages                                           |
 | --------------------------------- | ------------------------------------------------------- |
-| **Simple**, conceptually          | **Toscas**, when nesting many (Callback hell)           |
+| **Simple**, conceptually          | **Rough**, when nesting many (Callback hell)           |
 | **Universal**, they are JS native | **Little intuitive**, to understand the flow is tedious |
 
 #### Notes
@@ -290,6 +290,10 @@ Similar to continuous delivery but runs until production.
 #### Pipeline.
 
 Steps to follow on a devops process.
+
+---
+
+![alt text](./finish_certificate.jpg "Client server comunication.")
 
 ---
 #NodeJS\
